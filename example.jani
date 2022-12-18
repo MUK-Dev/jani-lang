@@ -1,0 +1,31 @@
+# This is a very useful piece of software
+
+samjhoJani oopify(prefix) -> prefix + "oop"
+
+samjhoJani join(elements, separator)
+	yeHaiJani result = ""
+	yeHaiJani len = LEN(elements)
+
+	janiKaLia i = 0 jabTak len phir
+		yeHaiJani result = result + elements/i
+		agarJani i != len - 1 phir yeHaiJani result = result + separator
+	khatamJani
+
+	lotaDo result
+khatamJani
+
+samjhoJani map(elements, func)
+	yeHaiJani new_elements = []
+
+	janiKaLia i = 0 jabTak LEN(elements) phir
+		APPEND(new_elements, func(elements/i))
+	khatamJani
+
+	lotaDo new_elements
+khatamJani
+
+PRINT("Greetings universe!")
+
+janiKaLia i = 0 jabTak 5 phir
+	PRINT(join(map(["l", "sp"], oopify), ", "))
+khatamJani
